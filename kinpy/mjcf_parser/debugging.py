@@ -37,15 +37,15 @@ from lxml import etree
 import six
 
 FLAGS = flags.FLAGS
-flags.DEFINE_boolean(
-    'pymjcf_debug', False,
-    'Enables PyMJCF debug mode (SLOW!). In this mode, a stack trace is logged '
-    'each the MJCF object is modified. This may be helpful in locating the '
-    'Python source line corresponding to a problematic element in the '
-    'generated XML.')
-flags.DEFINE_string(
-    'pymjcf_debug_full_dump_dir', '',
-    'Path to dump full debug info when Mujoco error is encountered.')
+# flags.DEFINE_boolean(
+#     'pymjcf_debug', False,
+#     'Enables PyMJCF debug mode (SLOW!). In this mode, a stack trace is logged '
+#     'each the MJCF object is modified. This may be helpful in locating the '
+#     'Python source line corresponding to a problematic element in the '
+#     'generated XML.')
+# flags.DEFINE_string(
+#     'pymjcf_debug_full_dump_dir', '',
+#     'Path to dump full debug info when Mujoco error is encountered.')
 
 StackTraceEntry = collections.namedtuple(
     'StackTraceEntry', ('filename', 'line_number', 'function_name', 'text'))
